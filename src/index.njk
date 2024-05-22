@@ -1,10 +1,10 @@
 ---
 opengraph: 
-    title: EdgePoint Learning Audio Samples
-    desc: Choose the perfect narrator for your project.
-    url: https://audio.edgepointlearning.com
-    img: https://audio.edgepointlearning.com/ogimage.jpg
-    img_alt: EdgePoint Learning's audio talent
+    title: EdgePoint Learning AI Audio Samples
+    desc: Choose the perfect AI narrator for your project.
+    url: https://ai-audio.edgepointlearning.com
+    img: https://ai-audio.edgepointlearning.com/ogimage.jpg
+    img_alt: EdgePoint Learning's AI audio talent
 ---
 <!doctype html>
 <html class="no-js" lang="en">
@@ -33,7 +33,7 @@ opengraph:
 
       {% svg "epl-logo", "w-full my-10 h-[50px] px-4 mx-auto" %}
 
-      <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-md -top-2 bg-gradient-to-bl from-indigo-900 via-blue-700 to-indigo-900 rounded-xl shadow-indigo-400">     
+      <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-md -top-2 bg-gradient-to-bl from-black via-slate-800 to-black rounded-xl shadow-slate-400">     
         <div>
           <p class="mb-2 text-xl font-bold leading-none text-white" data-amplitude-song-info="artist" data-amplitude-main-song-info="true"></p>
           <p class="text-lg leading-none text-blue-100" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></p>
@@ -57,9 +57,9 @@ opengraph:
       <table class="w-full mb-4 bg-white shadow-md shadow-slate-300 rounded-xl">
         <thead>
           <tr class="leading-4 tracking-wide border-b-2 border-slate-500 bg-slate-100 text-slate-600">
-            <th class="pt-4 pb-3 pl-4 font-normal text-left rounded-tl-xl">Name</th>
-            <th class="pt-4 pb-3 font-normal ">Professional<br> Sample</th>
-            <th class="pt-4 pb-3 pr-4 font-normal rounded-tr-xl">Casual<br>  Sample</th>
+            <th class="pt-4 pb-3 pl-4 font-normal text-left rounded-tl-xl">Name 🤖</th>
+            <th class="pt-4 pb-3 font-normal ">AI Voice<br> Sample</th>
+
           </tr>
         </thead>
         <tbody>
@@ -68,12 +68,6 @@ opengraph:
             <tr class="{{'bg-slate-100' if loop.index % 2 == 0}}">
               <td class="py-4 pl-4 text-xl">{{ person.name }}</td>
               <td>
-                <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
-                  {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
-                  {% svg "audio", "hidden w-6 h-6 button-pause" %}
-                </div>
-              </td>
-              <td class="pr-4">
                 <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
                   {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
                   {% svg "audio", "hidden w-6 h-6 button-pause" %}
@@ -93,13 +87,8 @@ opengraph:
         {% for person in people %}
           {
             "artist": "{{ person.name }}",
-            "album" : "Professional Sample",
-            "url"   : "{{ person.professional }}"
-          },
-          {
-            "artist": "{{ person.name }}",
-            "album" : "Casual Sample",
-            "url"   : "{{ person.casual }}"
+            "album" : "AI Voice Sample",
+            "url"   : "{{ person.sample }}"
           }{% if loop.last == false %},{% endif %}
         {% endfor %}
       ]

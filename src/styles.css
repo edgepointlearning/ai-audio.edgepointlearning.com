@@ -6,10 +6,10 @@
 
 @layer components {
   .playlist-button {
-    @apply flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 hover:playlist-button-shadow bg-slate-400 fill-white hover:bg-blue-600 place-items-center;
+    @apply flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 hover:playlist-button-shadow bg-slate-400 fill-white hover:bg-black place-items-center;
   }
   .playlist-button-shadow {
-    @apply shadow-md shadow-indigo-400;
+    @apply shadow-md shadow-slate-400;
   }
 }
 
@@ -28,7 +28,7 @@ svg {
 
 /* hightlight current song (playlist) */
 .amplitude-active-song-container {
-  @apply bg-blue-600 fill-white;
+  @apply bg-black fill-white;
 }
 
 /* swap svg's based on play state (playlist) */
@@ -57,10 +57,10 @@ progress {
 
 /* progress: style playing foreground color */
 progress.amplitude-song-played-progress::-webkit-progress-value {
-  @apply bg-blue-300 rounded-full;
+  @apply bg-slate-300 rounded-full;
 }
 progress.amplitude-song-played-progress::-moz-progress-bar {
-  @apply bg-blue-300 rounded-full;
+  @apply bg-slate-300 rounded-full;
 }
 /* progress: style playing background color */
 progress.amplitude-song-played-progress {
@@ -72,15 +72,15 @@ progress.amplitude-song-played-progress::-webkit-progress-bar {
 
 /* progress: style buffer foreground color */
 progress.amplitude-buffered-progress::-webkit-progress-value {
-  @apply bg-indigo-600 rounded-full;
+  @apply bg-slate-600 rounded-full;
 }
 progress.amplitude-buffered-progress::-moz-progress-bar {
-  @apply bg-indigo-600 rounded-full;
+  @apply bg-slate-600 rounded-full;
 }
 /* progress: style buffer background color */
 progress.amplitude-buffered-progress {
-  @apply bg-indigo-900;
+  @apply bg-slate-900;
 }
 progress.amplitude-buffered-progress::-webkit-progress-bar {
-  @apply bg-indigo-900;
+  @apply bg-slate-900;
 }
